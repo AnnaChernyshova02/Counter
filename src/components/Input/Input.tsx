@@ -12,7 +12,7 @@ const Input = ({onChange, value, max, min}: InputType) => {
 
     const styleInput = (max < 0 || min < 0 || max <= min) ? 'error' : 'workInput'
 
-    return <input type="number" onChange={onChange} className={styleInput} value={value}/>;
+    return <input type="number" onChange={onChange} className={styleInput} value={value} min={0}/>;
 };
 
 

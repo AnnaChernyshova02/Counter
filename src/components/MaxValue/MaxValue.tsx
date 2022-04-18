@@ -13,11 +13,11 @@ const MaxValue = () => {
     const dispatch = useDispatch()
 
     const changeValueMax = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch(maxCounter(Number(e.target.value)))
+            dispatch(maxCounter(Number(e.target.value)))
     }
 
     const changeValueMin = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch(minCounter(Number(e.target.value)))
+            dispatch(minCounter(Number(e.target.value)))
     }
 
     const error = max <= min || min < 0 || max < 0
@@ -26,10 +26,10 @@ const MaxValue = () => {
         <div className={"settingValues"}>
             <div className={"blockInput"}>
                 <div> Max value : <Input onChange={changeValueMax} max={max} min={min}
-                                          value={max}/>
+                                         value={max}/>
                 </div>
                 <div> Start value : <Input onChange={changeValueMin} max={max} min={min}
-                    value={min}/>
+                                           value={min}/>
                     {error && < div style={{color: "red"}}> incorrect value </div>}
                 </div>
             </div>
